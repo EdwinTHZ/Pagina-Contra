@@ -1,0 +1,108 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #000, #1a1a1a); /* 🌌 fondo oscuro original */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.registro-contenedor {
+  background: rgba(20, 20, 20, 0.85);
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 400px;
+  width: 100%;
+  color: #fff;
+  box-shadow: 0 0 25px rgba(255, 0, 255, 0.3);
+  backdrop-filter: blur(10px);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.registro-contenedor h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 0 0 10px #f72585, 0 0 20px #7209b7;
+}
+
+label {
+  display: block;
+  margin: 12px 0 5px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  outline: none;
+  background: #111;
+  color: #fff;
+  font-size: 14px;
+  box-shadow: 0 0 8px rgba(114, 9, 183, 0.8);
+  transition: 0.3s ease;
+}
+
+input:focus {
+  border: 2px solid #9d4edd;
+  box-shadow: 0 0 15px #9d4edd, 0 0 25px #f72585;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(270deg, red, violet, blue, cyan, lime, yellow, orange, red);
+  background-size: 400% 400%;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.3s ease;
+  animation: rgbButton 6s linear infinite;
+  text-shadow: 0 0 8px #fff;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+button:hover {
+  transform: translateY(-3px) scale(1.03);
+  filter: brightness(1.2);
+}
+
+p {
+  margin-top: 15px;
+  text-align: center;
+}
+
+a {
+  color: #f72585;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #9d4edd;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes rgbButton {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

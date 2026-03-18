@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimalCare - Panel Principal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>AnimalCare</h1>
+        <nav>
+            <ul>
+                <li><a href="VentanaPrincipal.html">Inicio</a></li>
+                <li><a href="RegistroAni.html">Registro de Animales</a></li>
+                <li><a href="campañas.html">Campañas</a></li>
+                <li><a href="reportes.html">Reportes</a></li>
+                <li><a href="Usuario.html">Perfil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="dashboard">
+            <h2>Bienvenido a AnimalCare</h2>
+            <div class="card-container">
+                <div class="card" onclick="window.location.href='registro.html'">
+                    <h3>Registro de Animales</h3>
+                    <p>Registrar, modificar y administrar datos de los animales.</p>
+                </div>
+                <div class="card" onclick="window.location.href='campañas.html'">
+                    <h3>Campañas</h3>
+                    <p>Ver y administrar campañas de concienciación animal.</p>
+                </div>
+                <div class="card" onclick="window.location.href='reportes.html'">
+                    <h3>Reportes</h3>
+                    <p>Visualizar estadísticas y reportes de la plataforma.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 CatByte - Conciencia Animal</p>
+    </footer>
+</body>
+</html>

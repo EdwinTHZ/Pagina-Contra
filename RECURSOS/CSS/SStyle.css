@@ -1,0 +1,152 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(135deg, #000000, #1a001a, #330033, #4d004d, #660066, #1a001a, #000000);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+}
+
+/* Fondo degradado animado */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Estrellas animadas */
+body::before, body::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 200%;
+  height: 200%;
+  background: transparent;
+  background-image: radial-gradient(2px 2px at 20px 30px, white, transparent),
+                    radial-gradient(2px 2px at 40px 70px, #a64ca6, transparent),
+                    radial-gradient(2px 2px at 130px 90px, #ffffff, transparent),
+                    radial-gradient(2px 2px at 90px 40px, #ff66ff, transparent),
+                    radial-gradient(2px 2px at 150px 150px, white, transparent),
+                    radial-gradient(2px 2px at 200px 80px, #d98cd9, transparent);
+  animation: starsMove 60s linear infinite;
+  opacity: 0.7;
+}
+
+body::after {
+  animation-duration: 120s; /* segunda capa de estrellas más lenta */
+  opacity: 0.4;
+}
+
+/* Movimiento de estrellas */
+@keyframes starsMove {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+.login-container {
+  background: rgba(0, 0, 0, 0.85);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(166, 76, 166, 0.6);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  color: #fff;
+  animation: fadeIn 1.5s ease;
+  border: 1px solid rgba(166, 76, 166, 0.4);
+  position: relative;
+  z-index: 10;
+}
+
+/* Animación entrada */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 0 0 10px #a64ca6;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  background: rgba(40, 0, 40, 0.8);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.login-container input:focus {
+  background: rgba(60, 0, 60, 0.9);
+  box-shadow: 0 0 12px #a64ca6;
+}
+
+/* Botón RGB animado */
+.login-container button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(270deg, red, orange, yellow, lime, cyan, blue, magenta, red);
+  background-size: 800% 800%;
+  animation: rgbGlow 8s linear infinite;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.7);
+}
+
+.login-container button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 35px rgba(255, 0, 255, 1);
+}
+
+.login-container button:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7) inset;
+}
+
+/* Animación RGB */
+@keyframes rgbGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.login-container p {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #bbb;
+}
+
+.login-container a {
+  color: #a64ca6;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.login-container a:hover {
+  color: #fff;
+  text-shadow: 0 0 8px #a64ca6;
+}

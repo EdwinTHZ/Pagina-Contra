@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CatByte - Sistema de Información</title>
+  <link rel="stylesheet" href="/Proyecto_Sistema_de_informacion/RECURSOS/CSS/estilo.css">
+</head>
+<body>
+  <!-- Menú lateral -->
+  <aside class="sidebar">
+    <h2>🐾 CatByte</h2>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="mostrarSeccion('inicio')"><img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="Inicio"> Inicio</a></li>
+        <li><a href="#" onclick="mostrarSeccion('registro')"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828506.png" alt="Registro"> Registro</a></li>
+        <li><a href="#" onclick="mostrarSeccion('lectura')"><img src="https://cdn-icons-png.flaticon.com/512/747/747376.png" alt="Lectura"> Lectura</a></li>
+        <li><a href="#" onclick="mostrarSeccion('modificar')"><img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png" alt="Modificar"> Modificar</a></li>
+        <li><a href="#" onclick="mostrarSeccion('perfil')"><img src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png" alt="Perfil"> Perfil</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Contenido principal -->
+  <main id="contenido">
+    <section id="inicio" class="seccion activa">
+      <h1>Bienvenido a CatByte 🐱</h1>
+      <p>Este es tu sistema de información. Usa el menú lateral para navegar.</p>
+      <img src="https://cdn.pixabay.com/photo/2017/11/09/21/41/cat-2934720_1280.jpg" alt="Gato" class="img-inicio">
+    </section>
+
+    <section id="registro" class="seccion">
+      <h1>Registro de Datos</h1>
+      <form>
+        <label>Nombre:</label>
+        <input type="text" required>
+        <label>Correo:</label>
+        <input type="email" required>
+        <label>Usuario:</label>
+        <input type="text" required>
+        <button type="submit">Registrar</button>
+      </form>
+    </section>
+
+    <section id="lectura" class="seccion">
+      <h1>Lectura de Datos</h1>
+      <table>
+        <tr><th>ID</th><th>Nombre</th><th>Correo</th></tr>
+        <tr><td>1</td><td>Camilo</td><td>camilo@example.com</td></tr>
+        <tr><td>2</td><td>Zoe</td><td>zoe@example.com</td></tr>
+      </table>
+    </section>
+
+    <section id="modificar" class="seccion">
+      <h1>Modificar Datos</h1>
+      <form>
+        <label>ID Usuario:</label>
+        <input type="number" required>
+        <label>Nuevo Correo:</label>
+        <input type="email" required>
+        <button type="submit">Modificar</button>
+      </form>
+    </section>
+
+    <section id="perfil" class="seccion">
+      <h1>Perfil de Usuario</h1>
+      <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Perfil" class="img-perfil">
+      <p><b>Nombre:</b> Usuario de Prueba</p>
+      <p><b>Correo:</b> usuario@example.com</p>
+      <button>Editar Perfil</button>
+      <button>Recuperar Contraseña</button>
+    </section>
+  </main>
+
+  <script src="/Proyecto_Sistema_de_informacion/RECURSOS/JavaScript/app.js"></script>
+</body>
+</html>

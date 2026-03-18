@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio de Sesión</title>
+  <link rel="stylesheet" href="../RECURSOS/CSS/SStyle.css" />
+</head>
+<body>
+  <div class="login-container">
+    <h2>Iniciar Sesión</h2>
+    <form id="loginForm" action="login.php" method="post">
+      <input type="usuario" id="usuario" name="usuario" placeholder="Nombre de usuario" required />
+      <input type="password" id="password" name="password" placeholder="Contraseña" required />
+      <button type="submit">Entrar</button>
+    </form>
+    <p>¿No tienes una cuenta? <a href="Registro.html">Regístrate</a></p>
+  </div>
+
+  <script src="../RECURSOS/JavaScript/inicio_sesion.js"></script>
+</body>
+</html>
