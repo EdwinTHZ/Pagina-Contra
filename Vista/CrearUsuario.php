@@ -12,7 +12,7 @@ $db = $conexion->obtenerConexion();
           $sql = $db->prepare("INSERT INTO usuarios (username, email, password) VALUES (?, ?, ?)");  
           $sql->execute([$nombre, $email, $password]);
 
-          header("Location: /Proyecto_Sistema_de_informacion/Vista/Inicio_sesion.html");
+          header("Location: /Proyecto_Sistema_de_informacion/Vista/Inicio_sesion.php");
           exit();
         } else {
             echo "Faltan datos. Por favor, completa todos los campos";
@@ -43,7 +43,7 @@ $db = $conexion->obtenerConexion();
 
       <button type="submit">Registrarse</button>
     </form>
-    <p>¿Ya tienes cuenta? <a href="/Proyecto_Sistema_de_informacion/Vista/Inicio_sesion.html">Inicia sesión</a></p>
+    <p>¿Ya tienes cuenta? <a href="/Proyecto_Sistema_de_informacion/Vista/Inicio_sesion.php">Inicia sesión</a></p>
   </div>
 
   <script src="/Proyecto_Sistema_de_informacion/RECURSOS/JavaScript/reg.js"></script>

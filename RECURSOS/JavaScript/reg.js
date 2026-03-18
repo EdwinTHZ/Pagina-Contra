@@ -29,5 +29,5 @@ document.head.appendChild(style);
 document.getElementById("registroForm").addEventListener("submit", function(event) {
   event.preventDefault(); // evita el envío real del formulario
   // Aquí podrías hacer validaciones antes de redirigir
-  window.location.href = "/Proyecto_Sistema_de_informacion/Vista/Inicio_sesion.html";
+  window.location.href = "/Proyecto_Sistema_de_informacion/Vista/Inicio_sesion.php";
 });
